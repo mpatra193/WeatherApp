@@ -32,8 +32,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //API key
-const API_key_fore = "openuv-1qupjrm5dz1kj4-io"
-const API_key_geo = "KI22Ln25trdfRpfooep1dg==NgfdOQQyrIJZ3EDJ"
 
 const API_key = process.env.API_KEY_OPENWEATHER;
 
@@ -43,16 +41,7 @@ const API_key = process.env.API_KEY_OPENWEATHER;
 // const  forecast_API = `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`;
 
 //header
-const config_forecast = {
-    headers: {
-        'x-access-token': API_key_fore
-    }
-}
-const config_geocode = {
-    headers: {
-        'X-Api-Key': API_key_geo
-    }
-}
+
 
 
 app.get("/", async (req, res) => {
